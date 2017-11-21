@@ -1,0 +1,747 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>UnknownTable</title>
+    <meta name="GENERATOR" content="HeidiSQL 7.0.0.4053">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <style type="text/css">
+      thead tr {background-color: ActiveCaption; color: CaptionText;}
+      th, td {vertical-align: top; font-family: "Tahoma"; font-size: 8pt; padding: 3px; }
+      table, td {border: 1px solid silver;}
+      table {border-collapse: collapse;}
+      thead .col0 {width: 110px;}
+      thead .col1 {width: 113px;}
+      thead .col2 {width: 53px;}
+      thead .col3 {width: 52px;}
+      thead .col4 {width: 67px;}
+      thead .col5 {width: 110px;}
+    </style>
+</head>
+
+<body>
+  <p align="center" ><h3>Inventory DB structure (Masters)</h3> </p>
+  <p>1. Category master    <br />
+  </p>
+  <table caption="UnknownTable (7 rows)" width="100%">
+    <thead>
+      <tr>
+        <th class="col0">Field</th>
+        <th class="col1">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col0">category_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">category_name</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">active_status</td>
+        <td class="col1">tinyint(4)</td>
+      </tr>
+      <tr>
+        <td class="col0">createdon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">createdby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+    </tbody>
+  </table>
+
+    <p>2. Item master</p>
+    <table caption="UnknownTable (16 rows)" style="width:100%">
+      <thead>
+        <tr>
+          <th class="col0">Field</th>
+          <th class="col1">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col0">item_id</td>
+          <td class="col1">int(10) unsigned</td>
+        </tr>
+        <tr>
+          <td class="col0">category_id</td>
+          <td class="col1">int(11)</td>
+        </tr>
+        <tr>
+          <td class="col0">item_code</td>
+          <td class="col1">varchar(50)</td>
+        </tr>
+        <tr>
+          <td class="col0">item_description</td>
+          <td class="col1">varchar(255)</td>
+        </tr>
+        <tr>
+          <td class="col0">item_unit_cost</td>
+          <td class="col1">decimal(12,2)</td>
+        </tr>
+        <tr>
+          <td class="col0">item_currency_id</td>
+          <td class="col1">tinyint(1)</td>
+        </tr>
+        <tr>
+          <td class="col0">item_grade</td>
+          <td class="col1">varchar(50)</td>
+        </tr>
+        <tr>
+          <td class="col0">item_weight</td>
+          <td class="col1">decimal(7,3)</td>
+        </tr>
+        <tr>
+          <td class="col0">item_measure_id</td>
+          <td class="col1">tinyint(1)</td>
+        </tr>
+        <tr>
+          <td class="col0">item_hts</td>
+          <td class="col1">varchar(50)</td>
+        </tr>
+        <tr>
+          <td class="col0">item_type</td>
+          <td class="col1">tinyint(1)</td>
+        </tr>
+
+        <tr>
+          <td class="col0">item_open_stock</td>
+          <td class="col1">int(11)</td>
+        </tr>
+        <tr>
+          <td class="col0">createdon</td>
+          <td class="col1">datetime</td>
+        </tr>
+        <tr>
+          <td class="col0">createdby</td>
+          <td class="col1">int(10) unsigned</td>
+        </tr>
+        <tr>
+          <td class="col0">lastmodifiedon</td>
+          <td class="col1">datetime</td>
+        </tr>
+        <tr>
+          <td class="col0">lastmodifiedby</td>
+          <td class="col1">int(10) unsigned</td>
+        </tr>
+      </tbody>
+    </table>
+<p>3.1 Item Group master</p>
+<table caption="UnknownTable (7 rows)" style="width:100%">
+    <thead>
+      <tr>
+        <th class="col0">Field</th>
+        <th class="col1">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col0">item_group_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">item_group_name</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">active_status</td>
+        <td class="col1">tinyint(4)</td>
+      </tr>
+      <tr>
+        <td class="col0">createdon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">createdby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+    </tbody>
+</table>
+  
+<p>3.2 Item group master (details records)</p>
+<table caption="UnknownTable (5 rows)" style="width:100%">
+    <thead>
+      <tr>
+        <th class="col0">Field</th>
+        <th class="col1">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col0">item_group_det_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">item_group_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">category_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">item_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">item_quantity</td>
+        <td class="col1">smallint(6)</td>
+      </tr>
+    </tbody>
+</table>
+<p>4. Customer master </p>
+<table caption="UnknownTable (31 rows)" style="width:100%">
+    <thead>
+      <tr>
+        <th class="col0">Field</th>
+        <th class="col1">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col0">customer_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">vendor_code</td>
+        <td class="col1">varchar(30)</td>
+      </tr>
+      <tr>
+        <td class="col0">company_name</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">primary_contact</td>
+        <td class="col1">varchar(30)</td>
+      </tr>
+      <tr>
+        <td class="col0">phone_no</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">mobile_no</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">website_url</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">attention_mail_addr</td>
+        <td class="col1">varchar(255)</td>
+      </tr>
+      <tr>
+        <td class="col0">warehouse_mail_addr</td>
+        <td class="col1">varchar(100)</td>
+      </tr>
+      <tr>
+        <td class="col0">address_mail_addr</td>
+        <td class="col1">varchar(255)</td>
+      </tr>
+      <tr>
+        <td class="col0">city_mail_addr</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">state_mail_addr</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">zipcode_mail_addr</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">country_mail_addr</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">company_phone_mail_addr</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">company_email_mail_addr</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">attention_bill_addr</td>
+        <td class="col1">varchar(255)</td>
+      </tr>
+      <tr>
+        <td class="col0">warehouse_bill_addr</td>
+        <td class="col1">varchar(100)</td>
+      </tr>
+      <tr>
+        <td class="col0">address_bill_addr</td>
+        <td class="col1">varchar(255)</td>
+      </tr>
+      <tr>
+        <td class="col0">city_bill_addr</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">state_bill_addr</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">zipcode_bill_addr</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">country_bill_addr</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">company_phone_bill_addr</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">company_email_bill_addr</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">company_logo_ext</td>
+        <td class="col1">varchar(10)</td>
+      </tr>
+      <tr>
+        <td class="col0">active_status</td>
+        <td class="col1">tinyint(4)</td>
+      </tr>
+      <tr>
+        <td class="col0">createdon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">createdby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+    </tbody>
+</table>
+<p>5.1 Vendor master</p>
+<table caption="UnknownTable (21 rows)" style="width:100%">
+    <thead>
+      <tr>
+        <th class="col0">Field</th>
+        <th class="col1">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col0">vendor_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_name</td>
+        <td class="col1">varchar(70)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_address</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_city</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_state</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_zipcode</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_phone</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_email</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_website</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_tin_cst</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_excise_no</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_contact_name</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_contact_no</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_shipping_terms</td>
+        <td class="col1">tinytext</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_payment_terms</td>
+        <td class="col1">tinytext</td>
+      </tr>
+      <tr>
+        <td class="col0">active_status</td>
+        <td class="col1">tinyint(4)</td>
+      </tr>
+      <tr>
+        <td class="col0">supplier_logo_ext</td>
+        <td class="col1">varchar(10)</td>
+      </tr>
+      <tr>
+        <td class="col0">createdon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">createdby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+    </tbody>
+</table>
+<p>5.2 Vendor master (details record: storing item and price)</p>
+<table caption="UnknownTable (5 rows)" style="width:100%">
+    <thead>
+      <tr>
+        <th class="col0">Field</th>
+        <th class="col1">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col0">vendor_det_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">item_description</td>
+        <td class="col1">varchar(250)</td>
+      </tr>
+      <tr>
+        <td class="col0">item_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">vendor_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">item_amount</td>
+        <td class="col1">decimal(12,2)</td>
+      </tr>
+    </tbody>
+</table>
+<p>6. User master</p>
+<table caption="UnknownTable (19 rows)" style="width:100%">
+    <thead>
+      <tr>
+        <th class="col0">Field</th>
+        <th class="col1">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col0">user_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">user_name</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">user_password</td>
+        <td class="col1">varchar(100)</td>
+      </tr>
+      <tr>
+        <td class="col0">employee_code</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">employee_name</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">user_address</td>
+        <td class="col1">varchar(255)</td>
+      </tr>
+      <tr>
+        <td class="col0">user_city</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">user_state</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">user_postalcode</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">user_phone</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">user_email</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">user_role_id</td>
+        <td class="col1">int(11)</td>
+      </tr>
+      <tr>
+        <td class="col0">active_status</td>
+        <td class="col1">tinyint(4)</td>
+      </tr>
+      <tr>
+        <td class="col0">createdon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">createdby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">user_logo_ext</td>
+        <td class="col1">varchar(10)</td>
+      </tr>
+      <tr>
+        <td class="col0">company_logo_ext</td>
+        <td class="col1">varchar(10)</td>
+      </tr>
+    </tbody>
+</table>
+<p>7. Role master</p>
+<table caption="UnknownTable (10 rows)" style="width:100%">
+    <thead>
+      <tr>
+        <th class="col0">Field</th>
+        <th class="col1">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col0">user_role_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">user_role_name</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">active_status</td>
+        <td class="col1">tinyint(4)</td>
+      </tr>
+      
+      <tr>
+        <td class="col0">createdon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">createdby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+    </tbody>
+</table>
+<p>8.1 Role permission master</p>
+<table caption="UnknownTable (6 rows)" style="width:100%">
+    <thead>
+      <tr>
+        <th class="col0">Field</th>
+        <th class="col1">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col0">assign_role_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">user_role_id</td>
+        <td class="col1">int(11)</td>
+      </tr>
+      <tr>
+        <td class="col0">createdon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">createdby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+    </tbody>
+</table>
+<p>8.2 Roles permission master (details record) </p>
+<table caption="UnknownTable (8 rows)" style="width:100%">
+    <thead>
+      <tr>
+        <th class="col0">Field</th>
+        <th class="col1">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col0">user_role_module_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">user_role_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">module_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">module_actions</td>
+        <td class="col1">varchar(100)</td>
+      </tr>
+      <tr>
+        <td class="col0">createdon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">createdby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+    </tbody>
+</table>
+<p>9. Modules list (list of modules)</p>
+<table caption="UnknownTable (14 rows)" style="width:100%">
+    <thead>
+      <tr>
+        <th class="col0">Field</th>
+        <th class="col1">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col0">module_id</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">module_name</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">module_desc</td>
+        <td class="col1">varchar(250)</td>
+      </tr>
+      <tr>
+        <td class="col0">module_code</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">parent_module_id</td>
+        <td class="col1">int(11)</td>
+      </tr>
+      <tr>
+        <td class="col0">js_call_identify</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">module_icon_class</td>
+        <td class="col1">varchar(20)</td>
+      </tr>
+      <tr>
+        <td class="col0">module_display_order</td>
+        <td class="col1">int(11)</td>
+      </tr>
+      <tr>
+        <td class="col0">active_status</td>
+        <td class="col1">tinyint(4)</td>
+      </tr>
+      <tr>
+        <td class="col0">module_actions</td>
+        <td class="col1">varchar(50)</td>
+      </tr>
+      <tr>
+        <td class="col0">createdon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">createdby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedon</td>
+        <td class="col1">datetime</td>
+      </tr>
+      <tr>
+        <td class="col0">lastmodifiedby</td>
+        <td class="col1">int(10) unsigned</td>
+      </tr>
+    </tbody>
+</table>
+</body>
+</html>

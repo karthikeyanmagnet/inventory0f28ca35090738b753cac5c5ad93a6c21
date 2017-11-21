@@ -1,0 +1,3 @@
+
+ALTER TABLE `bud_shipment_order` ADD `reverse_charge` VARCHAR(250) NOT NULL AFTER `lastmodifiedby`, ADD `precarriage_mode` VARCHAR(250) NOT NULL AFTER `reverse_charge`, ADD `vehicle_no` VARCHAR(250) NOT NULL AFTER `precarriage_mode`, ADD `supply_date` DATE NOT NULL AFTER `vehicle_no`, ADD `supply_place` VARCHAR(250) NOT NULL AFTER `supply_date`, ADD `vessel_flight_no` VARCHAR(250) NOT NULL AFTER `supply_place`, ADD `port_load` VARCHAR(250) NOT NULL AFTER `vessel_flight_no`, ADD `port_discharge` VARCHAR(250) NOT NULL AFTER `port_load`, ADD `final_destination` VARCHAR(250) NOT NULL AFTER `port_discharge`;
+ALTER TABLE `bud_shipment_order` ADD `other_reference` VARCHAR(250) NOT NULL AFTER `final_destination`;
